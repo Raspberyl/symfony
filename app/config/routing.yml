@@ -1,0 +1,7 @@
+william_ecommerce:
+    resource: "@WilliamEcommerceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+william_calcul:
+    resource: "@WilliamCalculBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+{% block title %}{{site_name}}{% endblock %}
+{% block body %}
+	{% render(controller('WilliamMenuBundle:Menu:displayPrimaryMenu')) %}
+	<div style="margin : 40px;">
+		{% for row in list|batch(3) %}			
+		        {% for column in row %}
+		            <div style="width : 350px ; height : 150px ; margin : 20px ; float : left">
+		            	<a href="{{ path('william_ecommerce_product', {'id' : column.id}) }}"><img style="float : left ; height : 150px ;" src="{{ asset('bundles/williamecommerce/'~column.photo) }}"/>
+
+		            	<b>{{ column.title }}</b><br/></a>
+
+						{% for category in column.category %}
+							<a href="">#{{ category.title }}</a>
+						{% endfor %}<br/>
+
+		            	<img style="width : 80px" src="{{ asset('bundles/williamecommerce/'~column.brand.logo) }}"/>{{ column.brand.title }}
+		            	<p style="float : right"><b>{{ column.price }}$</b></p>
+		            </div>
+		        {% endfor %}
+		    </br>
+		{% endfor %}
+	</div>
+{% endblock %}

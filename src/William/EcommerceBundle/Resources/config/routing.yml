@@ -1,0 +1,76 @@
+william_ecommerce_index:
+    pattern:  /
+    defaults: { _controller: WilliamEcommerceBundle:Index:index}
+
+william_ecommerce_indexByBrand:
+    pattern:  /ByBrand/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Index:indexByBrand}
+    requirements:
+        id: \d*
+
+william_ecommerce_productadd:
+    pattern:  /product/add
+    defaults: { _controller: WilliamEcommerceBundle:Product:add }
+
+william_ecommerce_productedit:
+    pattern:  /product/edit/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Product:edit}
+    requirements:
+        id: \d*
+
+william_ecommerce_productdelete:
+    pattern:  /product/delete/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Product:delete }
+    requirements:
+        id: \d*
+
+william_ecommerce_product:
+    pattern:  /product/{id}.{_format}
+    defaults: { _controller: WilliamEcommerceBundle:Product:product, _format: html }
+    requirements: 
+        id: \d*
+        _format: html|json
+
+william_ecommerce_categoryadd:
+    pattern:  /category/add
+    defaults: { _controller: WilliamEcommerceBundle:Category:add }
+
+william_ecommerce_categoryedit:
+    pattern:  /category/edit/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Category:edit}
+    requirements:
+        id: \d*
+
+william_ecommerce_categorydelete:
+    pattern:  /category/delete/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Category:delete }
+    requirements:
+        id: \d*
+
+william_ecommerce_category:
+    pattern:  /category/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Category:category}
+    requirements: 
+        id: \d*
+
+william_ecommerce_brandadd:
+    pattern:  /brand/add
+    defaults: { _controller: WilliamEcommerceBundle:Brand:add }
+
+william_ecommerce_brandedit:
+    pattern:  /brand/edit/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Brand:edit}
+    requirements:
+        id: \d*
+
+william_ecommerce_branddelete:
+    pattern:  /brand/delete/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Brand:delete }
+    requirements:
+        id: \d*
+
+william_ecommerce_brand:
+    pattern:  /brand/{id}
+    defaults: { _controller: WilliamEcommerceBundle:Brand:brand}
+    requirements: 
+        id: \d*

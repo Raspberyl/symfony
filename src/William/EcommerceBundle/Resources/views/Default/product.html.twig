@@ -1,0 +1,23 @@
+{% extends "WilliamEcommerceBundle::layout.html.twig" %}
+{% block title %}{{site_name}} - {{ product.title }}{% endblock %}
+{% block body %}
+	{% render(controller('WilliamMenuBundle:Menu:displayPrimaryMenu')) %}
+	<div style="margin : 40px ; width : 400px">
+		<h3>{{ product.title }}</h3> 
+			{% for category in product.category %}
+				<a href="">#{{ category.title }}</a>
+			{% endfor %}
+		<img src="{{ asset('bundles/williamecommerce/'~product.photo) }}"/></br></br>
+		<img src="{{ asset('bundles/williamecommerce/'~product.brand.logo) }}"/>{{ product.brand.title }}</br></br>
+		{{ product.description }}<br/>
+
+			{% if product.stock %}
+			<p style="float : right ; color : green">En stock</p>
+			{% else %}
+			<p style="float : right ; color : red">En rupture de stock</p>
+			{% endif %}</br></br>
+			
+		<b>{{ product.price }}$</b>
+		<p style="float : right">{{ product.creationdate | date("d/m/y --- h\\hm") }}</p>
+	</div>
+{% endblock %}

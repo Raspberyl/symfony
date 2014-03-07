@@ -1,0 +1,14 @@
+william_calcul_addition:
+    pattern:  /calcul/{a}/{b}
+    defaults: { _controller: WilliamCalculBundle:Calcul:calcul }
+    requirements :
+        a: \d*
+        b: \d*
+
+william_calcul_resultat:
+    pattern: /resultat/{resultat}
+    defaults: { _controller: WilliamCalculBundle:Calcul:resultat }
+
+william_calcul_fibo:
+    pattern: /fibonacci/{nb}
+    defaults: { _controller: WilliamCalculBundle:Calcul:fibo }

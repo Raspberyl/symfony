@@ -1,0 +1,9 @@
+parameters:
+#    william_calcul.example.class: William\CalculBundle\Example
+
+services:
+#    william_calcul.example:
+#        class: %william_calcul.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+     william_calcul.fibonacci:
+        class: William\CalculBundle\Fibonacci\Fibonacci

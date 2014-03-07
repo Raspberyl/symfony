@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/williamecommerce/css/basic.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/williamecommerce/css/foundation.min.css') }}"/>
+	<script type="text/javascript" charset="utf-8" src="{{ asset('bundles/williamecommerce/js/vendor/modernizr.js') }}"></script>
+{% endblock %}
+{% block javascripts %}
+	<script type="text/javascript" charset="utf-8" src="{{ asset('bundles/williamecommerce/js/vendor/jquery.js') }}"></script>
+	<script type="text/javascript" charset="utf-8" src="{{ asset('bundles/williamecommerce/js/vendor/fastclick.js') }}"></script>
+	<script type="text/javascript" charset="utf-8" src="{{ asset('bundles/williamecommerce/js/foundation.min.js') }}"></script>
+	<script>$(document).foundation();</script>
+{% endblock %}

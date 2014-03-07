@@ -1,0 +1,27 @@
+<nav class="top-bar" data-topbar data-options="is_hover: false">
+<ul class="title-area">
+    <li class="name">
+      <h1><a href="#">My Site</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="">Brand</a>
+        <ul class="dropdown">
+          {% for brand in list %}          
+          <li><a href="{{ path('william_ecommerce_indexByBrand', {'id' : brand.id}) }}">{{ brand.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="#">Left Nav Button</a></li>
+    </ul>
+  </section>
+</nav>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/williamecommerce/css/foundation.min.css') }}" media="screen" />
+        <!--<link rel="stylesheet" type="text/css" href="{{ asset('bundles/williamecommerce/css/basic.css') }}" media="screen" />-->
+    </head>
+    <body>
+        {% block body %}<p>Le produit n°{{id}} a été supprimé.</p>{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
